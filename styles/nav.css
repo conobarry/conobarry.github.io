@@ -1,0 +1,143 @@
+/* Navigation */
+
+.sticky {
+    position: fixed;
+    top: 0px;
+}
+
+nav {
+    width: 100%;
+    color: var(--background);
+    background-color: var(--navbar);
+    text-align: center;
+    padding: 5px 0px;
+    -webkit-box-shadow: 0 2px 5px 0 rgba(1, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    -moz-box-shadow: 0 2px 5px 0 rgba(1, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 5px 0 rgba(1, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    position: relative;
+    z-index: 1;
+    height: 42px;
+    margin-bottom: -42px;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    position: relative;
+    margin: 0px 15px;
+    padding: 5px 0px;
+}
+
+nav li:hover {
+    background-color: var(--highlight);
+}
+
+nav a {
+    color: var(--background);
+    text-decoration: none;
+    font-weight: bold;
+    padding: 5px 10px;
+}
+
+nav .drop-menu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    background-color: var(--navbar);
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 10;
+    padding: 5px 0px;
+}
+
+nav .drop-menu li {
+    float: left;
+    width: 100%;
+    padding: 0px;
+    margin: 0px;
+}
+
+nav .drop-menu a {
+    float: left;
+    text-align: left;
+    width: 100%;
+    height: 100%;
+    padding: 5px;
+    margin: 0;
+}
+
+nav .drop-down:hover .drop-menu {
+    display: block;
+}
+
+nav span,
+nav input {
+    display: none;
+}
+
+.hamburger span,
+.hamburger input {
+    display: block;
+}
+
+.hamburger span {
+    position: relative;
+    font-size: 1.5em;
+    left: 0px;
+}
+
+.hamburger #close-icon {
+    display: none;
+    padding-bottom: 6px;
+    /* Hack so that the burger and chevron are same size */
+}
+
+.hamburger input {
+    position: absolute;
+    width: 100%;
+    height: 32px;
+    cursor: pointer;
+    opacity: 0;
+    z-index: 2;
+}
+
+.hamburger input:checked ~ ul {
+    height: 160px;
+    /* Make height fit all the menu items */
+}
+
+.hamburger input:checked ~ span #burger-icon {
+    display: none;
+}
+
+.hamburger input:checked ~ span #close-icon {
+    display: block;
+}
+
+.hamburger ul {
+    position: relative;
+    width: 100%;
+    height: 0px;
+    background-color: var(--navbar);
+    -webkit-transition: height 0.3s ease;
+    transition: height 0.3s ease;
+    z-index: 1;
+    box-shadow: 0 2px 5px 0 rgba(1, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+    overflow: hidden;
+}
+
+.hamburger li {
+    display: block;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.hamburger a {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.hamburger .drop-down:hover .drop-menu {
+    display: none;
+}

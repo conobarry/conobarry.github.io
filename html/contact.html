@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en-US">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Contact - Conor Barry's Industrial Placement</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="../scripts/global-script.js"></script>
+    <script src="../scripts/contact-script.js"></script>
+    <!-- Font Awesome icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="../styles/global-styles.css" />
+    <link rel="stylesheet" href="../styles/contact-styles.css" />
+</head>
+
+<body>
+    <!-- The header of the page. Contains title and the nav bar -->
+    <header></header>
+    <nav></nav>
+    <div id="main">
+        <div class="section">
+            <h3>Contact</h3>
+            <div class="centered">
+                <p>Not sure why you'd want to contact me, but it's a great excuse to make an HTML form!</p>
+                <p>Just enter your details below and I'll get back to you ASAP!</p>
+                <form id="contact-form">
+                    <!-- Name -->
+                    <label class="name label" for="name">Name: </label>
+                    <input id="name" class="name input">
+                    <!-- Email -->
+                    <label class="email label" for="email">Email address: </label>
+                    <input id="email" class="email input" type="email" />
+                    <!-- Message -->
+                    <label class="message label" for="message">Message: </label>
+                    <textarea id="message" class="message input"></textarea>
+                </form>
+                <!-- Error message -->
+                <span id="error-message"></span>
+                <!-- Button -->
+                <button id="contact-form-button" onclick="validateContactForm()"><i class="fa fa-paper-plane-o "></i> Send</button>
+                <p id="report-bug">Something wrong with my JavaScript? <a class="report-bug">Report a bug</a>.</p>
+            </div>
+        </div>
+    </div>
+    <footer></footer>
+</body>
+
+</html>

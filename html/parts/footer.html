@@ -1,0 +1,61 @@
+<div id="footer-top">
+    <p><a href="#">Back to top</a></p>
+</div>
+<div id="footer-middle">
+    <div id="footer-pages">
+        <h3>Pages</h3>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </div>
+    <div id="footer-projects">
+        <h3>Projects</h3>
+        <ul>
+            <li><a href="projects/budget.html">Budget</a></li>
+            <li><a href="projects/documentation.html">Documentation</a></li>
+        </ul>
+    </div>
+</div>
+<div id="footer-bottom">
+    <p><a class="report-bug" href="#bug-modal">Report a bug</a></p>
+    <p><i class="fa fa-flag"></i> <a href="http://fontawesome.io">Font Awesome</a> by Dave Gandy</p>
+    <p>Last modified:
+        <span id="last-modified">
+            <script>new Date(document.lastModified).toDateString();</script>
+        </span>
+    </p>
+    <p>&copy;
+        <span id="curr-year">
+            <!-- For some reason this only works if it's inline -->
+            <script>$("#curr-year").html(new Date().getFullYear());</script>
+        </span> Conor J. Barry
+    </p>
+</div>
+<div id="bug-modal">
+    <div id="bug-wrapper">
+        <span id="bug-close">&times;</span>
+        <h2>Report a Bug</h2>
+        <p id="bug-intro">Thank you for taking the time to let me know about any problems with this website. Please fill out the form below and I will follow it up as soon as I can.</p>
+        <form id="bug-form">
+            <!-- Type -->
+            <!--<label class="type"><input type="radio" name="bug-report-type" value="feedback" />Feedback</label>
+            <label class="type"><input type="radio" name="feedback-type" value="bug" />Bug report</label>-->
+            <!-- Email address -->
+            <label class="email" for="email">Email address (optional):</label>
+            <label class="email info" for="email">Please provide an email address for me to use if I need any further information.</label>
+            <input id="email" class="email input" type="email" />
+            <!-- Message -->
+            <label class="message" for="message">Description:</label>
+            <label class="message info" for="message">Please describe the bug as best you can.</label>
+            <textarea id="message" class="message input"></textarea>
+        </form>
+        <!-- Error message -->
+        <span id="error-message"></span>
+        <!-- Button -->
+        <button onclick="validateContactForm()"><i class="fa fa-paper-plane-o "></i> Send</button>
+    </div>
+</div>

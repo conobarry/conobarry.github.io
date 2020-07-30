@@ -1,0 +1,136 @@
+#main {
+    padding-bottom: 500px;
+}
+
+#main p {
+    text-align: center;
+    margin: 1em 0px;
+}
+
+.gallery ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-bottom: 1em;
+}
+
+.gallery li {
+    list-style-type: none;
+}
+
+.gallery img {
+    display: inline;
+    max-height: 200px;
+    margin: 5px 10px;
+    cursor: pointer;
+}
+
+.gallery img:hover {
+    opacity: 0.8;
+}
+
+#gallery-modal {
+    position: fixed;
+    display: none;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    padding-top: 10%;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+#gallery-close {
+    position: absolute;
+    top: 1%;
+    right: 2%;
+    color: #bbb;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+    z-index: 2;
+    padding: 0px 10px;
+}
+
+#gallery-close:hover,
+#gallery-close:focus {
+    color: #f1f1f1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#gallery-content {
+    position: relative;
+    margin: auto;
+    padding: 0;
+    width: 85%;
+}
+
+#gallery-img {
+    position: relative;
+    overflow: hidden;
+}
+
+#gallery-img img {
+    display: block;
+    max-height: 70vh;
+    max-width: 100%;
+    top: 0;
+    margin: auto;
+}
+
+#gallery-caption {
+    color: #ccc;
+    padding: 10px;
+}
+
+#gallery-prev,
+#gallery-next {
+    top: 0;
+    height: 100%;
+    cursor: pointer;
+    position: absolute;
+    width: 30%;
+}
+
+#gallery-prev i,
+#gallery-next i {
+    transition: 0.3s;
+    position: absolute;
+    top: 40%;
+    display: block;
+    font-size: 4em;
+    border-radius: 10px;
+    color: white;
+    opacity: 0;    
+    background-color: #000;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#gallery-next {
+    right: 0;
+}
+
+#gallery-prev {
+    left: 0;
+}
+
+#gallery-next i {
+    right: 10px;
+    padding: 5% 3% 1.5% 4%;
+}
+
+#gallery-prev i {
+    left: 10px;
+    padding: 5% 4% 1.5% 3%;
+}
+
+#gallery-next:hover i,
+#gallery-prev:hover i {
+    opacity: 1;
+}
+
